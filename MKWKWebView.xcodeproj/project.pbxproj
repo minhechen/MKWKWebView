@@ -14,6 +14,10 @@
 		81A8584F1E0CC43000DB20EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81A8584D1E0CC43000DB20EC /* LaunchScreen.storyboard */; };
 		81A8585A1E0CC43000DB20EC /* MKWKWebViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A858591E0CC43000DB20EC /* MKWKWebViewTests.swift */; };
 		81A858651E0CC43000DB20EC /* MKWKWebViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A858641E0CC43000DB20EC /* MKWKWebViewUITests.swift */; };
+		81A858741E0CC46800DB20EC /* MKWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A858731E0CC46800DB20EC /* MKWKWebView.swift */; };
+		81A858761E0CC4B200DB20EC /* MKWKWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A858751E0CC4B200DB20EC /* MKWKWebViewViewController.swift */; };
+		81A858781E0CC57200DB20EC /* MKWKWebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A858771E0CC57200DB20EC /* MKWKWebViewProtocol.swift */; };
+		81A8587C1E0CD4AF00DB20EC /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 81A8587B1E0CD4AF00DB20EC /* test.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		81A858601E0CC43000DB20EC /* MKWKWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKWKWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A858641E0CC43000DB20EC /* MKWKWebViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKWKWebViewUITests.swift; sourceTree = "<group>"; };
 		81A858661E0CC43000DB20EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A858731E0CC46800DB20EC /* MKWKWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKWKWebView.swift; sourceTree = "<group>"; };
+		81A858751E0CC4B200DB20EC /* MKWKWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKWKWebViewViewController.swift; sourceTree = "<group>"; };
+		81A858771E0CC57200DB20EC /* MKWKWebViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKWKWebViewProtocol.swift; sourceTree = "<group>"; };
+		81A8587B1E0CD4AF00DB20EC /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 		81A858431E0CC43000DB20EC /* MKWKWebView */ = {
 			isa = PBXGroup;
 			children = (
+				81A858721E0CC44900DB20EC /* MKWKWebView */,
 				81A858441E0CC43000DB20EC /* AppDelegate.swift */,
 				81A858461E0CC43000DB20EC /* ViewController.swift */,
 				81A858481E0CC43000DB20EC /* Main.storyboard */,
@@ -123,6 +132,17 @@
 				81A858661E0CC43000DB20EC /* Info.plist */,
 			);
 			path = MKWKWebViewUITests;
+			sourceTree = "<group>";
+		};
+		81A858721E0CC44900DB20EC /* MKWKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				81A8587B1E0CD4AF00DB20EC /* test.html */,
+				81A858731E0CC46800DB20EC /* MKWKWebView.swift */,
+				81A858751E0CC4B200DB20EC /* MKWKWebViewViewController.swift */,
+				81A858771E0CC57200DB20EC /* MKWKWebViewProtocol.swift */,
+			);
+			path = MKWKWebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A8587C1E0CD4AF00DB20EC /* test.html in Resources */,
 				81A8584F1E0CC43000DB20EC /* LaunchScreen.storyboard in Resources */,
 				81A8584C1E0CC43000DB20EC /* Assets.xcassets in Resources */,
 				81A8584A1E0CC43000DB20EC /* Main.storyboard in Resources */,
@@ -262,7 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A858761E0CC4B200DB20EC /* MKWKWebViewViewController.swift in Sources */,
 				81A858471E0CC43000DB20EC /* ViewController.swift in Sources */,
+				81A858781E0CC57200DB20EC /* MKWKWebViewProtocol.swift in Sources */,
+				81A858741E0CC46800DB20EC /* MKWKWebView.swift in Sources */,
 				81A858451E0CC43000DB20EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E259VB52Z6;
 				INFOPLIST_FILE = MKWKWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mackchan.MKWKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +455,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E259VB52Z6;
 				INFOPLIST_FILE = MKWKWebView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mackchan.MKWKWebView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +540,7 @@
 				81A8586B1E0CC43000DB20EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81A8586C1E0CC43000DB20EC /* Build configuration list for PBXNativeTarget "MKWKWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +549,7 @@
 				81A8586E1E0CC43000DB20EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81A8586F1E0CC43000DB20EC /* Build configuration list for PBXNativeTarget "MKWKWebViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +558,7 @@
 				81A858711E0CC43000DB20EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

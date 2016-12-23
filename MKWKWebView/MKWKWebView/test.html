@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Call back iOS</title>
+	<style type="text/css">
+	  * {
+	  	font-size: 44px;
+	  }
+	</style>
+</head>
+
+<body>
+  
+<div style="margin-top: 20px">
+	<h1>how to use JS call back iOS</h1><br/>
+	<div><input type="button" value="HelloMKWKWebView0" onclick="JS_getCallSwift('HelloMKWKWebView0')"></div>
+    <br/>
+	<div><input type="button" value="HelloMKWKWebView1" onclick="jsCallSwift()"></div><br/>
+</div>
+<br/>
+<div>
+	<div><input type="button" value="HelloMKWKWebView2" onclick="JsCalledSwift('HelloMKWKWebView2','iOS','HelloMKWKWebView2')"></div><br/>
+
+  <div>Click me here: <a href="http://www.github.com/minhechen">Jump to my github</a></div>
+</div>
+
+<br/>
+<div id="SwiftDiv">
+	<span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>
+</div>
+<!--window.AcJs_get( "接口名",  参数);-->
+<script type="text/javascript">
+    /*
+     function_name:接口名称
+     os:调用系统Mac/Windows
+     parameters:传递参数
+     */
+
+    function js_CallSwift(function_name,os,parameters){
+        if (os.toLowerCase() == "ios"){
+            window["webkit"]["messageHandlers"][function_name]["postMessage"]({'parameters': parameters});
+        }else{
+            window.AcJs_get(name,parameters);
+        }
+}
+    //js call swift
+   function jsCallSwift() {
+
+<!--    window.webkit.messageHandlers.HelloMKWKWebView0.postMessage({body: 'call js alert in js'});-->
+
+        js_CallSwift("HelloMKWKWebView0","iOS","hello")
+<!--    window["webkit"]["messageHandlers"]["HelloMKWKWebView0"]["postMessage"]({body: 'call js alert in js'})-->
+
+   }
+
+    function JS_getCallSwift(parameters) {
+        
+        <!--    window.webkit.messageHandlers.HelloMKWKWebView0.postMessage({body: 'call js alert in js'});-->
+        
+        js_CallSwift("HelloMKWKWebView0","iOS",parameters)
+        <!--    window["webkit"]["messageHandlers"]["HelloMKWKWebView0"]["postMessage"]({body: 'call js alert in js'})-->
+        
+    }
+
+    function JsCalledSwift(function_name,os,parameters) {
+        
+        <!--    window.webkit.messageHandlers.HelloMKWKWebView0.postMessage({body: 'call js alert in js'});-->
+        
+        js_CallSwift("HelloMKWKWebView2","iOS",parameters)
+        <!--    window["webkit"]["messageHandlers"]["HelloMKWKWebView0"]["postMessage"]({body: 'call js alert in js'})-->
+        
+    }
+
+</script>
+</body>
+</html>

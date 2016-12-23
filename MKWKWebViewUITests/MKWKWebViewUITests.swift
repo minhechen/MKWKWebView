@@ -2,7 +2,7 @@
 //  MKWKWebViewUITests.swift
 //  MKWKWebViewUITests
 //
-//  Created by 51talkAC-Mack on 12/23/16.
+//  Created by https://github.com/minhechen on 12/23/16.
 //  Copyright © 2016 MackChan. All rights reserved.
 //
 
